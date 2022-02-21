@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_splash"
+    >
+
+    <fragment
+        android:id="@+id/navigation_splash"
+        android:name="dev.keithyokoma.navigationbehaviorissuepoc.ui.splash.SplashFragment"
+        android:label="Splash"
+        tools:layout="@layout/fragment_splash"
+        >
+
+        <!-- XXX Adding popUpTo and popUpToInclusive brings unexpected BottomNavigation behavior. -->
+        <action
+            android:id="@+id/nav_splash_to_home"
+            app:destination="@id/navigation_home"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="dev.keithyokoma.navigationbehaviorissuepoc.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home"
+        >
+
+        <action
+            android:id="@+id/nav_home_to_screen_a"
+            app:destination="@id/navigation_screen_a"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+
+        <action
+            android:id="@+id/nav_home_to_screen_b"
+            app:destination="@id/navigation_screen_b"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="dev.keithyokoma.navigationbehaviorissuepoc.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard"
+        >
+
+        <action
+            android:id="@+id/nav_dashboard_to_screen_a"
+            app:destination="@id/navigation_screen_a"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+
+        <action
+            android:id="@+id/nav_dashboard_to_screen_b"
+            app:destination="@id/navigation_screen_b"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="dev.keithyokoma.navigationbehaviorissuepoc.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications">
+
+        <action
+            android:id="@+id/nav_notifications_to_screen_a"
+            app:destination="@id/navigation_screen_a"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+
+        <action
+            android:id="@+id/nav_notifications_to_screen_b"
+            app:destination="@id/navigation_screen_b"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_screen_a"
+        android:name="dev.keithyokoma.navigationbehaviorissuepoc.ui.content.ScreenAFragment"
+        android:label="Screen A"
+        tools:layout="@layout/fragment_screen_a">
+
+        <action
+            android:id="@+id/nav_screen_a_to_screen_a"
+            app:destination="@id/navigation_screen_a"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+
+        <action
+            android:id="@+id/nav_screen_a_to_screen_b"
+            app:destination="@id/navigation_screen_b"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_screen_b"
+        android:name="dev.keithyokoma.navigationbehaviorissuepoc.ui.content.ScreenBFragment"
+        android:label="Screen B"
+        tools:layout="@layout/fragment_screen_b">
+
+        <action
+            android:id="@+id/nav_screen_b_to_screen_a"
+            app:destination="@id/navigation_screen_a"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+
+        <action
+            android:id="@+id/nav_screen_b_to_screen_b"
+            app:destination="@id/navigation_screen_b"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+
+    </fragment>
+
+</navigation>
